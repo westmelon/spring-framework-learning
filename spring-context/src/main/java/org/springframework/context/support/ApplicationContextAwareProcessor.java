@@ -109,6 +109,7 @@ class ApplicationContextAwareProcessor implements BeanPostProcessor {
 		if (bean instanceof EnvironmentAware) {
 			((EnvironmentAware) bean).setEnvironment(this.applicationContext.getEnvironment());
 		}
+		//获取spel解析器
 		if (bean instanceof EmbeddedValueResolverAware) {
 			((EmbeddedValueResolverAware) bean).setEmbeddedValueResolver(this.embeddedValueResolver);
 		}
